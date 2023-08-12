@@ -5,7 +5,7 @@ import DishesCard from "./dishesCard";
 
 export default function FeaturedRow({ title, description, restaurants }) {
   return (
-    <View>
+    <View style={styles.viewcontainercontainer}>
       <View style={styles.viewcontainer}>
         <View>
           <Text style={styles.texttitle}>{title}</Text>
@@ -16,8 +16,6 @@ export default function FeaturedRow({ title, description, restaurants }) {
         </TouchableOpacity>
       </View>
       <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.scrollviewcontentcontiner}
       style={styles.scrollview}
       >
@@ -45,7 +43,7 @@ const styles = StyleSheet.create({
     bottom:1,
     marginRight:10,
     marginLeft:10,
-    marginVertical:10
+    marginVertical:10,
   },
   texttitle: {
     fontWeight: "bold",
@@ -53,12 +51,16 @@ const styles = StyleSheet.create({
   },
   textdescription:{
     fontSize:15,
-    color:"gray"
+    color:"gray",
   },
   scrollviewcontentcontiner:{
-    paddingHorizontal:15
+    paddingHorizontal:15,
   },
   scrollview:{
     overflow:"visible",
+  },
+  viewcontainercontainer:{
+    top:20,
+    height:300
   }
 });

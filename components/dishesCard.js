@@ -44,7 +44,7 @@ export default function DishesCard({ item }) {
   //   );
   // } else {
     return (
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("loginscreen")}>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("servicesandproducts")}>
         <View style={styles.viewcontiner}>
           <Image source={item.image} style={styles.img} />
           <View style={styles.viewname}>
@@ -73,10 +73,11 @@ const styles = StyleSheet.create({
     bottom: 3,
     borderRadius: 20,
     shadowRadius: 7,
+    left:11
   },
   img: {
     height: 138,
-    width: 244,
+    width: "auto",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
   },
