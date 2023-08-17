@@ -61,6 +61,8 @@ const styles = StyleSheet.create({
   },
   viewcontainercontainer:{
     top:20,
-    height:300
+    height:300,
+    borderWidth:4,
+    objectFit: "contain"
   }
 });

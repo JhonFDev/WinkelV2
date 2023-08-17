@@ -5,8 +5,8 @@ export const featuredServices = {
   restaurants: [
     {
       id: 1,
-      name: "Podar tus arboles",
-      image: require("../../assets/podarbol1.jpg"),
+      name: "Servicios publicos y otros servicios",
+      image: require("../../assets/serviciosconnombre.png"),
       stars: 4,
       reviews: "4.4k",
       category: "Services",

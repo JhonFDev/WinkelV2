@@ -73,13 +73,15 @@ const styles = StyleSheet.create({
     bottom: 3,
     borderRadius: 20,
     shadowRadius: 7,
-    left:11
+    left:11,
+    maxWidth:600
   },
   img: {
-    height: 138,
-    width: "auto",
+    height: 200,
+    width: 343,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    objectFit:"contain"
   },
   viewname: {
     marginLeft: 10,
