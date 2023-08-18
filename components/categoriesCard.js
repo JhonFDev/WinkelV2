@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 // import { isUserLoggedAuthChaged } from "../../utils/actions";
 // import FoodTime from "./foodTime";
 
-export default function DishesCard({ item }) {
+export default function CategoriesCard({ item }) {
   const navigation = useNavigation();
   // const { user } = isUserLoggedAuthChaged();
   // if (user) {
@@ -44,7 +44,7 @@ export default function DishesCard({ item }) {
   //   );
   // } else {
     return (
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("servicesandproducts")}>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('servicesandproducts', {...item})}>
         <View style={styles.viewcontiner}>
           <Image source={item.image} style={styles.img} />
           <View style={styles.viewname}>
@@ -74,11 +74,10 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     shadowRadius: 7,
     left:11,
-    maxWidth:600
   },
   img: {
-    height: 200,
-    width: 343,
+    height:150,
+    width: "100%",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     objectFit:"contain"

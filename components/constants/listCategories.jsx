@@ -2,12 +2,13 @@ export const featuredServices = {
   id: 1,
   title: "Servicios",
   description: "Servicios de personas con talento",
-  restaurants: [
+  serviceandproduct: [
     {
       id: 1,
-      name: "Servicios publicos y otros servicios",
+      name: "Servicios publicos y otros",
       image: require("../../assets/serviciosconnombre.png"),
       stars: 4,
+      description: "Servicios de personas con talento",
       reviews: "4.4k",
       category: "Services",
       time: [
@@ -105,10 +106,10 @@ export const featuredProducts = {
   id: 2,
   title: "Productos",
   description: "Productos locales y nacionales",
-  restaurants: [
+  serviceandproduct: [
     {
       id: 1,
-      name: "Vasos Personalizados",
+      name: "Productos de marca y personalizados",
       image: require("../../assets/vaso-personalizado2.jpg"),
       stars: 4,
       reviews: "4.4k",

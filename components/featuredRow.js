@@ -1,9 +1,12 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import DishesCard from "./dishesCard";
-// import DishesCard from "./dishesCard";
 
-export default function FeaturedRow({ title, description, restaurants }) {
+
+//mis imports
+import CategoriesCard from "./categoriesCard";
+
+
+export default function FeaturedRow({ title, description, serviceandproducts }) {
   return (
     <View style={styles.viewcontainercontainer}>
       <View style={styles.viewcontainer}>
@@ -20,10 +23,10 @@ export default function FeaturedRow({ title, description, restaurants }) {
       style={styles.scrollview}
       >
       {
-        restaurants.map((restaurant,listCategories) => {
+        serviceandproducts.map((itemsSAP,listCategories) => {
             return (
-                <DishesCard
-                    item={restaurant}
+                <CategoriesCard
+                    item={itemsSAP}
                     key={listCategories}
                 />
             )
@@ -40,7 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent:"space-between",
     alignItems:"center",
-    bottom:1,
+    bottom:2,
     marginRight:10,
     marginLeft:10,
     marginVertical:10,
@@ -62,7 +65,6 @@ const styles = StyleSheet.create({
   viewcontainercontainer:{
     top:20,
     height:300,
-    borderWidth:4,
-    objectFit: "contain"
+    
   }
 });

@@ -22,9 +22,7 @@ export default function Navigation() {
         <Stack.Screen name="homescreen" component={HomeScreen} />
         <Stack.Screen name="loginscreen" component={LoginScreen} />
         <Stack.Screen name="registercreen" component={RegisterScreen} />
-        <Stack.Screen
-          name="servicesandproducts"
-          component={ServicesAndProducts}
+        <Stack.Screen name="servicesandproducts" component={ServicesAndProducts}
         />
       </Stack.Navigator>
     </NavigationContainer>

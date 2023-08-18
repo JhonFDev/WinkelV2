@@ -28,13 +28,13 @@ export default function HomeScreen() {
 
       {/* menu */}
       <ScrollView>
-        <View>
+        <View style={styles.viewmenu}>
           {[featuredServices, featuredProducts].map((item, listCategories) => {
             return (
               <FeaturedRow
                 key={listCategories}
                 title={item.title}
-                restaurants={item.restaurants}
+                serviceandproducts={item.serviceandproduct}
                 description={item.description}
               />
             );
@@ -69,4 +69,8 @@ const styles = StyleSheet.create({
   inputcontainr: {
     borderColor: "transparent",
   },
+  viewmenu:{
+    height:760 ,
+    gap:20
+  }
 });
