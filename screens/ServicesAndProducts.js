@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
+import SapRow from "../components/sapRow";
 
 export default function ServicesAndProducts() {
   const { params } = useRoute();
@@ -38,9 +39,18 @@ export default function ServicesAndProducts() {
                 <Text style={styles.textcategory}>{item.category}</Text>
               </Text>
             </View>
-            
-          <Text style={styles.textdescription}>{item.description}</Text>
+
+            <Text style={styles.textdescription}>{item.description}</Text>
           </View>
+        </View>
+
+        {/* menu */}
+        <View style={styles.viewmenu}>
+          <Text style={styles.txttitlemenu}>lista de {item.titlename}</Text>
+          {/* listado servicios y productos */}
+          {
+            item.itemsap.map((isap,listCatgories)=> <SapRow item={{...isap}} key={listCatgories}/>)
+          }
         </View>
       </ScrollView>
     </>
@@ -89,7 +99,7 @@ const styles = StyleSheet.create({
     top: 209,
     width: "100%",
     backgroundColor: "white",
-    paddingBottom: 10,
+    paddingBottom: 40,
   },
   textname: {
     fontWeight: "bold",
@@ -107,7 +117,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     gap: 2,
     alignItems: "center",
-    left:20
+    left: 20,
   },
   textstars: {
     color: "#228b22",
@@ -118,8 +128,18 @@ const styles = StyleSheet.create({
   textcategory: {
     fontWeight: "600",
   },
-  textdescription:{
-    fontSize:15,
-    color:"gray",
+  textdescription: {
+    fontSize: 15,
+    color: "gray",
   },
+  txttitlemenu:{
+    paddingVertical:10,
+    paddingHorizontal:10,
+    fontSize:19,
+    fontWeight:"bold"
+  },
+  viewmenu:{
+    paddingBottom:40,
+    backgroundColor:"white"
+  }
 });
