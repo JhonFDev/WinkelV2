@@ -48,9 +48,9 @@ export default function ServicesAndProducts() {
         <View style={styles.viewmenu}>
           <Text style={styles.txttitlemenu}>lista de {item.titlename}</Text>
           {/* listado servicios y productos */}
-          {
-            item.itemsap.map((isap,listCatgories)=> <SapRow item={{...isap}} key={listCatgories}/>)
-          }
+          {item.itemsap.map((isap, listCatgories) => (
+            <SapRow item={{ ...isap }} key={listCatgories} />
+          ))}
         </View>
       </ScrollView>
     </>
@@ -132,14 +132,14 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "gray",
   },
-  txttitlemenu:{
-    paddingVertical:10,
-    paddingHorizontal:10,
-    fontSize:19,
-    fontWeight:"bold"
+  txttitlemenu: {
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    fontSize: 19,
+    fontWeight: "bold",
   },
-  viewmenu:{
-    paddingBottom:40,
-    backgroundColor:"white"
-  }
+  viewmenu: {
+    paddingBottom: 40,
+    backgroundColor: "white",
+  },
 });

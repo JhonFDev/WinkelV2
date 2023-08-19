@@ -9,6 +9,7 @@ import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import ServicesAndProducts from "../screens/ServicesAndProducts";
+import ListSAP from "../screens/ListSAP";
 
 const Stack = createNativeStackNavigator();
 export default function Navigation() {
@@ -22,8 +23,8 @@ export default function Navigation() {
         <Stack.Screen name="homescreen" component={HomeScreen} />
         <Stack.Screen name="loginscreen" component={LoginScreen} />
         <Stack.Screen name="registercreen" component={RegisterScreen} />
-        <Stack.Screen name="servicesandproducts" component={ServicesAndProducts}
-        />
+        <Stack.Screen name="servicesandproducts" component={ServicesAndProducts}/>
+        <Stack.Screen name="listsap" component={ListSAP}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -33,10 +34,8 @@ function guessscreen() {
   return (
     <Stack.Navigator initialRouteName="home">
       <Stack.Screen name="home" component={HomeScreen} />
-      <Stack.Screen
-        name="servicesandproducts"
-        component={ServicesAndProducts}
-      />
+      <Stack.Screen name="servicesandproducts" component={ServicesAndProducts}/>
+      <Stack.Screen name="listsap" component={ListSAP}/>
     </Stack.Navigator>
   );
 }
