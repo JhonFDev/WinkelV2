@@ -14,9 +14,7 @@ export default function FeaturedRow({ title, description, serviceandproducts }) 
           <Text style={styles.texttitle}>{title}</Text>
           <Text style={styles.textdescription}>{description}</Text>
         </View>
-        <TouchableOpacity>
-            <Text>Ver Todo</Text>
-        </TouchableOpacity>
+        
       </View>
       <ScrollView
       contentContainerStyle={styles.scrollviewcontentcontiner}
