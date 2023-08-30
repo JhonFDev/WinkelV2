@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
     alignItems:"center"    
   },
   viewscrollview:{
-    flexDirection: "row",
-    justifyContent:"space-between",
     alignItems:"center",
-    bottom:1,
     marginRight:10,
     marginLeft:10,
     marginVertical:10,
+    borderWidth:2,
+    width:385,
+    
   },
   viewknowandcontact:{
     width:290,
@@ -104,7 +104,8 @@ touch: {
   backgroundColor: "#808080",
 },
 scrollviewcontentcontiner:{
-  paddingHorizontal:15
+  paddingHorizontal:15,
+  gap:20
 },
 scrollview:{
   overflow:"visible",

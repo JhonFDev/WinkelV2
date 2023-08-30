@@ -1,7 +1,6 @@
 import { Image, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { Icon } from '@rneui/themed';
 
 export default function SapCard({item}) {
     const navigation = useNavigation();
@@ -46,12 +45,11 @@ export default function SapCard({item}) {
             <Image source={item.photo} style={styles.img} />
             <View style={styles.viewname}>
               <Text style={styles.textname}>{item.name}</Text>
-              <View style={styles.viewicontr}>
-                <Image source={item.star} />
-                <Text>{item.star}</Text>
-                <Text style={styles.textstars}>{item.stars}</Text>
+              <View style={styles.viewicontr} >
+                <Image source={item.star} style={styles.imgstar}/>
+                <Text style={styles.textstars}>{item.stars}{" "}</Text>
                 <Text style={styles.textreviews}>
-                  ({item.reviews}) .{" "}
+                  {item.reviews}{" "}
                   <Text style={styles.textcategory}>{item.category}</Text>
                 </Text>
               </View>
@@ -72,13 +70,15 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         shadowRadius: 7,
         left:11,
+        borderWidth:1,
+        width:300
       },
       img: {
         height:150,
         width: "100%",
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
-        objectFit:"contain"
+        resizeMode:"contain"
       },
       viewname: {
         marginLeft: 10,
@@ -105,4 +105,8 @@ const styles = StyleSheet.create({
       textcategory: {
         fontWeight: "600",
       },
+      imgstar:{
+        height:20,
+        width: 25,
+      }
 })
