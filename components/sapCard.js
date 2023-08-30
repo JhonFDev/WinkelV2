@@ -47,10 +47,11 @@ export default function SapCard({item}) {
             <View style={styles.viewname}>
               <Text style={styles.textname}>{item.name}</Text>
               <View style={styles.viewicontr}>
-                <Icon name="star" type="material-community" color={"#ffd700"} />
+                <Image source={item.star} />
+                <Text>{item.star}</Text>
                 <Text style={styles.textstars}>{item.stars}</Text>
                 <Text style={styles.textreviews}>
-                  ({item.reviews} Reviews) .{" "}
+                  ({item.reviews}) .{" "}
                   <Text style={styles.textcategory}>{item.category}</Text>
                 </Text>
               </View>

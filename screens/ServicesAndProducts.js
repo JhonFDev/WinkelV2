@@ -10,13 +10,18 @@ import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Icon } from "@rneui/themed";
 import SapRow from "../components/sapRow";
+import { LogBox } from 'react-native';
+
+LogBox.ignoreLogs([
+  'Non-serializable values were found in the navigation state',
+]);
 
 export default function ServicesAndProducts() {
   const { params } = useRoute();
   const navigation = useNavigation();
 
   let item = params;
-  console.log("item: ", item);
+  // console.log("item: ", item);
 
   return (
     <>
@@ -31,14 +36,14 @@ export default function ServicesAndProducts() {
         <View style={styles.viewcontainerpresentation}>
           <View style={styles.viewname}>
             <Text style={styles.textname}>{item.name}</Text>
-            <View style={styles.viewicontr}>
+            {/* <View style={styles.viewicontr}>
               <Icon name="star" type="material-community" color={"#ffd700"} />
               <Text style={styles.textstars}>{item.stars}</Text>
               <Text style={styles.textreviews}>
                 ({item.reviews} Reviews) .{" "}
                 <Text style={styles.textcategory}>{item.category}</Text>
-              </Text>
-            </View>
+              </Text> */}
+            {/* </View> */}
 
             <Text style={styles.textdescription}>{item.description}</Text>
           </View>
@@ -75,11 +80,12 @@ function ArrowLeft() {
 const styles = StyleSheet.create({
   viewimg: {
     position: "relative",
+    height:300,
   },
   img: {
     width: "100%",
     height: 300,
-    objectFit: "contain",
+    resizeMode: "repeat",
   },
   arrowleft: {
     zIndex: 50,

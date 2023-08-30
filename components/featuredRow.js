@@ -11,8 +11,8 @@ export default function FeaturedRow({ title, description, serviceandproducts }) 
     <View style={styles.viewcontainercontainer}>
       <View style={styles.viewcontainer}>
         <View>
-          <Text style={styles.texttitle}>{title}</Text>
-          <Text style={styles.textdescription}>{description}</Text>
+          {/* <Text style={styles.texttitle}>{title}</Text> */}
+          {/* <Text style={styles.textdescription}>{description}</Text> */}
         </View>
         
       </View>
@@ -63,6 +63,5 @@ const styles = StyleSheet.create({
   viewcontainercontainer:{
     top:20,
     height:300,
-    
   }
 });

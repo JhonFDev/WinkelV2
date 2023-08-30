@@ -49,14 +49,14 @@ export default function CategoriesCard({ item }) {
           <Image source={item.image} style={styles.img} />
           <View style={styles.viewname}>
             <Text style={styles.textname}>{item.name}</Text>
-            <View style={styles.viewicontr}>
+            {/* <View style={styles.viewicontr}>
               <Icon name="star" type="material-community" color={"#ffd700"} />
               <Text style={styles.textstars}>{item.stars}</Text>
               <Text style={styles.textreviews}>
                 ({item.reviews} Reviews) .{" "}
                 <Text style={styles.textcategory}>{item.category}</Text>
               </Text>
-            </View>
+            </View> */}
           </View>
         </View>
         </TouchableWithoutFeedback>
@@ -69,18 +69,16 @@ const styles = StyleSheet.create({
     marginRight: 20,
     backgroundColor: "white",
     shadowOpacity: 0.6,
-    elevation: 14,
-    bottom: 3,
+    elevation: 44,
     borderRadius: 20,
     shadowRadius: 7,
     left:11,
   },
   img: {
-    height:150,
+    height:190,
     width: "100%",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    objectFit:"contain"
   },
   viewname: {
     marginLeft: 10,
@@ -89,8 +87,9 @@ const styles = StyleSheet.create({
   },
   textname: {
     paddingBottom: 10,
-    fontSize: 17,
+    fontSize: 25,
     fontWeight: "bold",
+    textAlign:"center"
   },
   viewicontr: {
     flexDirection: "row",

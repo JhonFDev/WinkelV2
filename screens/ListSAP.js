@@ -68,9 +68,8 @@ function ArrowLeft() {
 const styles = StyleSheet.create({
   viewcontainer:{
     paddingTop:20,
-    width:400,
+    width:"100%",
     top:5,
-    height:640,
     alignItems:"center"    
   },
   viewscrollview:{
@@ -80,7 +79,7 @@ const styles = StyleSheet.create({
     bottom:1,
     marginRight:10,
     marginLeft:10,
-    marginVertical:10
+    marginVertical:10,
   },
   viewknowandcontact:{
     width:290,
