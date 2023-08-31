@@ -45,7 +45,7 @@ export default function ServicesAndProducts() {
               </Text> */}
             {/* </View> */}
 
-            <Text style={styles.textdescription}>{item.description}</Text>
+            {/* <Text style={styles.textdescription}>{item.description}</Text> */}
           </View>
         </View>
 

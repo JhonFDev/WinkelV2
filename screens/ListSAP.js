@@ -77,9 +77,8 @@ const styles = StyleSheet.create({
     marginRight:10,
     marginLeft:10,
     marginVertical:10,
-    borderWidth:2,
-    width:385,
-    
+    width:"100%",
+    alignSelf:"baseline"
   },
   viewknowandcontact:{
     width:290,

@@ -166,7 +166,7 @@ export const featuredProducts = {
       name: "Productos canasta familiar",
       titlename: "Productos",
       image: require("../../assets/productos-agricolas.png"),
-      description: "Productos locales y nacionales",
+      // description: "Productos locales y nacionales",
       knowandcontact: "Frutas y verduras frescas",
 
       itemsap: [
@@ -175,18 +175,21 @@ export const featuredProducts = {
           name: "Aguacates",
           image: require("../../assets/aguacates.jpeg"),
           description: "",
+          price:"$1.300 pesos"
         },
         {
           id: 2,
           name: "Bananos",
           image: require("../../assets/Bananos.jpg"),
           description: "",
+          price:"$500 pesos"
         },
         {
           id: 3,
           name: "Coco",
           image: require("../../assets/coco.jpg"),
           description: "",
+          price:"$2.000 pesos"
         },
       ],
     },

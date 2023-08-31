@@ -66,13 +66,13 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         shadowOpacity: 0.6,
         elevation: 14,
-        bottom: 3,
         borderRadius: 20,
         shadowRadius: 7,
-        left:11,
         borderWidth:1,
-        width:300
-      },
+        width:300,        
+        alignContent:"center",
+        alignItems:"center"
+                },
       img: {
         height:150,
         width: "100%",

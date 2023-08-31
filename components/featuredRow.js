@@ -9,13 +9,13 @@ import CategoriesCard from "./categoriesCard";
 export default function FeaturedRow({ title, description, serviceandproducts }) {
   return (
     <View style={styles.viewcontainercontainer}>
-      <View style={styles.viewcontainer}>
-        <View>
+      {/* <View style={styles.viewcontainer}> */}
+        {/* <View> */}
           {/* <Text style={styles.texttitle}>{title}</Text> */}
           {/* <Text style={styles.textdescription}>{description}</Text> */}
-        </View>
+        {/* </View> */}
         
-      </View>
+      {/* </View> */}
       <ScrollView
       contentContainerStyle={styles.scrollviewcontentcontiner}
       style={styles.scrollview}
